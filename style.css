@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(120deg, #ffd1dc, #a6d0f3);
+    color: #333;
+    overflow-x: hidden;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+.container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1.animated-text {
+    font-size: 3em;
+    color: #ff69b4;
+    animation: bounce 2s infinite;
+}
+
+.nama span {
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+.foto-container img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    animation: pulse 3s infinite;
+}
+
+.ucapan {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #555;
+}
+
+.boneka-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.boneka-container img {
+    width: 120px;
+    height: auto;
+    animation: wiggle 2s infinite ease-in-out;
+}
+
+/* Animasi */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(120deg, #ffd1dc, #a6d0f3); }
+    100% { background: linear-gradient(120deg, #a6d0f3, #ffd1dc); }
+}
